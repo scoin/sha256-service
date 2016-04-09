@@ -2,9 +2,9 @@
 
 ###Dependencies:
 
-Python 2.7.x
-pip
-virtualenv
+Python 2.7.x  
+pip  
+virtualenv  
 
 
 ###Run:
@@ -46,7 +46,7 @@ Response
 }
 ```
 
-####GET /hash/<hash>
+####GET /hash/`<hash>`
 
 Example:
 
