@@ -24,7 +24,7 @@ python test.py
 
 ###Endpoints:
 
-####POST /hash
+####POST /hash/
 Request Headers Content-Type must be "application/json"
 
 Example:
