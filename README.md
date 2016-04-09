@@ -46,7 +46,7 @@ Response
 }
 ```
 
-####GET /hash/`<hash>`
+####GET /hash/:hash
 
 Example:
 
