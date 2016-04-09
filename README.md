@@ -46,13 +46,13 @@ Response
 }
 ```
 
-####GET /hash/`<hash>`
+####GET /hash/`<hash>`/
 
 Example:
 
 Request
 ```
-GET /hash/426fc04f04bf8fdb5831dc37bbb6dcf70f63a37e05a68c6ea5f63e85ae579376
+GET /hash/426fc04f04bf8fdb5831dc37bbb6dcf70f63a37e05a68c6ea5f63e85ae579376/
 ```
 
 Response
