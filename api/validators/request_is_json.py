@@ -3,7 +3,7 @@ import json
 
 
 def request_is_json(f):
-    def closure(*args, **kwargs):
+    def json_check(*args, **kwargs):
         if request.headers.get("CONTENT-TYPE") != "application/json":
             abort(400, "Must set CONTENT-TYPE header to application/json")
         try:
@@ -13,4 +13,4 @@ def request_is_json(f):
 
         return f(*args, **kwargs)
 
-    return closure
+    return json_check
