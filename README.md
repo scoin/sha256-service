@@ -46,6 +46,13 @@ Response
 }
 ```
 
+Error Responses
+```
+400 - Content-Type not application/json
+
+400 - Post Data not valid JSON
+```
+
 ####GET /hash/:hash
 
 Example:
@@ -61,4 +68,11 @@ Response
 {
   "foo": "bar"
 }
+```
+
+Error Responses
+```
+400 - not a valid SHA256 Hash
+
+404 - resource not found
 ```
