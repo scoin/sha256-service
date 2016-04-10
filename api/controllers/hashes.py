@@ -1,5 +1,6 @@
 from flask import request, Blueprint, jsonify, make_response, abort, current_app
 from api.validators.request_is_json import request_is_json
+from api.validators.param_is_sha256 import param_is_sha256
 from api.models.hash import Hash
 
 
@@ -14,6 +15,7 @@ def post_hash():
 
 
 @hashes.route("/<hashstring>", methods=["GET"], strict_slashes=False)
+@param_is_sha256
 def get_hash(hashstring):
     json_data = current_app.db.get(hashstring)
     if(json_data is None):
