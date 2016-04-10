@@ -51,8 +51,12 @@ class ShaServiceTestCase(unittest.TestCase):
         self.assertEqual(json.loads(resp.get_data())["hash"],
                          self.hashes["valid"])
 
-    def test_get_404(self):
+    def test_get_400_not_sha256(self):
         resp = self.app.get('/hash/hello')
+        self.assertEqual(resp.status_code, 400)
+
+    def test_get_404_valid_sha256_not_in_db(self):
+        resp = self.app.get('/hash/f7226c05f95b6fd5cb1dbe87a8a6f2da1cdf6270364dab6098f9dc1ff21a082c')
         self.assertEqual(resp.status_code, 404)
 
     def test_get_200_empty(self):
