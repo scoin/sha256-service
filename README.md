@@ -24,7 +24,7 @@ python test.py
 
 ###Caveats
 
-For the sake of this challenge, I am holding data entered by the user in memory. There is no persistence, and concurrent requests are sure to cause problems.
+For the sake of this challenge, I am holding data entered by the user in memory. The data does not persistence after killing the server, and concurrent requests are sure to cause problems.
 
 The SHA256 hash created is in hex format. To retreive the data associated with that hash, the hash must be entered in hex.
 
